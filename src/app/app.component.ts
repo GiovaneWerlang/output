@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'output';
+
+  @Input() habilita:any;
+
+  teste(habilita:any){
+    this.habilita = habilita;
+    console.log('output');
+    console.log(habilita);
+  }
 }
